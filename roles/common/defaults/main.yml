@@ -1,5 +1,5 @@
 ---
-timezone: "Etc/UTC"
+timezone: "Asia/Shanghai"
 
 # Red Hat Subscription Manager credentials
 subscription_manager_activationkey: ""
@@ -13,23 +13,23 @@ use_satellite: false
 
 kerberos_realm: EXAMPLE.COM
 
-epel_mirror_baseurl: "http://dl.fedoraproject.org/pub/epel"
-epel_repos:
-  epel:
-    name: "Extra Packages for Enterprise Linux"
-    baseurl: "{{ epel_mirror_baseurl }}/{{ ansible_distribution_major_version }}/$basearch"
-    mirrorlist: file:///etc/yum.repos.d/epel-mirrorlist
-    failovermethod: priority
-    # ternary requires ansible >= 1.9
-    enabled: "{{ enable_epel | ternary(1, 0) }}"
-    gpgcheck: 0
-  epel-testing:
-    name: "Extra Packages for Enterprise Linux - Testing"
-    baseurl: "{{ epel_mirror_baseurl }}/testing/{{ ansible_distribution_major_version }}/$basearch"
-    mirrorlist: file:///etc/yum.repos.d/epel-testing-mirrorlist
-    failovermethod: priority
-    enabled: 0
-    gpgcheck: 0
+epel_mirror_baseurl: "http://mirrors.aliyun.com/epel"
+#epel_repos:
+#  epel:
+#    name: "Extra Packages for Enterprise Linux"
+#    baseurl: "{{ epel_mirror_baseurl }}/{{ ansible_distribution_major_version }}/$basearch"
+#    mirrorlist: file:///etc/yum.repos.d/epel-mirrorlist
+#    failovermethod: priority
+#    # ternary requires ansible >= 1.9
+#    enabled: "{{ enable_epel | ternary(1, 0) }}"
+#    gpgcheck: 0
+#  epel-testing:
+#    name: "Extra Packages for Enterprise Linux - Testing"
+#    baseurl: "{{ epel_mirror_baseurl }}/testing/{{ ansible_distribution_major_version }}/$basearch"
+#    mirrorlist: file:///etc/yum.repos.d/epel-testing-mirrorlist
+#    failovermethod: priority
+#    enabled: 0
+#    gpgcheck: 0
 
 # Override in secrets repo
 beta_repos: {}
