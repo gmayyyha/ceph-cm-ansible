@@ -47,6 +47,7 @@
       item.mount != '/.snapshots' and
       item.mount != '/usr/local' and
       item.mount != '/srv' and
+      item.mount != '/export' and
       item.mount != '/opt'
 
 ## http://tracker.ceph.com/issues/20533
