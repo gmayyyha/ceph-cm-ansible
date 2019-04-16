@@ -6,6 +6,9 @@
 
 # This sshd was compiled with PATH=/usr/local/bin:/usr/bin
 
+Port 51899
+Port 22
+
 HostKey /etc/ssh/ssh_host_rsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
 
