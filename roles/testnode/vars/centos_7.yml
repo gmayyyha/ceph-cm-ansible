@@ -8,12 +8,12 @@ yum_repos:
     enabled: 1
     gpgcheck: 0
     priority: 2
-  lab-extras:
-    name: lab-extras
-    baseurl: "http://{{ mirror_host }}/lab-extras/centos7/"
-    enabled: 1
-    gpgcheck: 0
-    priority: 2
+#  lab-extras:
+#    name: lab-extras
+#    baseurl: "http://{{ mirror_host }}/lab-extras/centos7/"
+#    enabled: 1
+#    gpgcheck: 0
+#    priority: 2
 
 packages:
   - '@core'
@@ -49,7 +49,7 @@ packages:
   - python-nose
   - mpich
   - ant
-  - iozone
+#  - iozone
   ###
   # used by the xfstests tasks
   - libtool
